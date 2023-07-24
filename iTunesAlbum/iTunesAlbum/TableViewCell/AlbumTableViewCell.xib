@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumTableViewCell" rowHeight="80" id="KGk-i7-Jjw" customClass="AlbumTableViewCell" customModule="iTunesAlbum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="537" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="537" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-6Z-rXr">
+                        <rect key="frame" x="20" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="70N-Iv-iKk"/>
+                            <constraint firstAttribute="height" constant="60" id="vdZ-Gf-ybr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-QT-HET">
+                        <rect key="frame" x="95" y="10" width="382" height="15.666666666666664"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGG-tK-CQ7">
+                        <rect key="frame" x="95" y="35.666666666666664" width="382" height="13.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-jw-i7z">
+                        <rect key="frame" x="487" y="25" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="BpJ-bq-aQn"/>
+                            <constraint firstAttribute="width" constant="30" id="IJl-hV-IBs"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="bookmark" catalog="system"/>
+                        <state key="selected" image="bookmark.fill" catalog="system"/>
+                        <connections>
+                            <action selector="bookmarkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KeV-CC-6f8"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uGG-tK-CQ7" firstAttribute="leading" secondItem="eFj-QT-HET" secondAttribute="leading" id="2ml-CN-HWh"/>
+                    <constraint firstAttribute="trailing" secondItem="ZOM-jw-i7z" secondAttribute="trailing" constant="20" id="ACY-vh-sby"/>
+                    <constraint firstItem="eFj-QT-HET" firstAttribute="leading" secondItem="hCI-6Z-rXr" secondAttribute="trailing" constant="15" id="Fxh-JW-cmE"/>
+                    <constraint firstItem="uGG-tK-CQ7" firstAttribute="top" secondItem="eFj-QT-HET" secondAttribute="bottom" constant="10" id="N1m-Aq-JnY"/>
+                    <constraint firstItem="hCI-6Z-rXr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vpp-UP-1RR"/>
+                    <constraint firstItem="hCI-6Z-rXr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="kDM-gt-65V"/>
+                    <constraint firstItem="ZOM-jw-i7z" firstAttribute="leading" secondItem="uGG-tK-CQ7" secondAttribute="trailing" constant="10" id="lop-QZ-Gfc"/>
+                    <constraint firstItem="eFj-QT-HET" firstAttribute="top" secondItem="hCI-6Z-rXr" secondAttribute="top" id="o3v-YE-7rE"/>
+                    <constraint firstItem="ZOM-jw-i7z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="opA-El-a9b"/>
+                    <constraint firstItem="uGG-tK-CQ7" firstAttribute="trailing" secondItem="eFj-QT-HET" secondAttribute="trailing" id="wU2-Dq-RXq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="albumImageView" destination="hCI-6Z-rXr" id="Zmi-Ss-jDf"/>
+                <outlet property="albumName" destination="eFj-QT-HET" id="efT-iB-ySR"/>
+                <outlet property="artistName" destination="uGG-tK-CQ7" id="1k2-xG-TeI"/>
+                <outlet property="bookmarkButton" destination="ZOM-jw-i7z" id="Hy6-MC-pHX"/>
+            </connections>
+            <point key="canvasLocation" x="54.198473282442748" y="59.154929577464792"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark" catalog="system" width="32" height="32"/>
+        <image name="bookmark.fill" catalog="system" width="32" height="32"/>
+    </resources>
+</document>
